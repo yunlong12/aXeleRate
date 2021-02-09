@@ -121,7 +121,7 @@ argparser = argparse.ArgumentParser(description='Test axelerate on sample datase
 argparser.add_argument(
     '-t',
     '--type',
-    default="all",
+    default="detector",
     help='type of network to test:classifier,detector,segnet or all')
     
 argparser.add_argument(
@@ -140,8 +140,8 @@ argparser.add_argument(
 
 args = argparser.parse_args()
 
-archs = ['MobileNet7_5']
-converters = [""]
+archs = ['MobileNet1_0']
+converters = ["k210"]
 errors = []
 
 if args.arch:
